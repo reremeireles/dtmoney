@@ -1,0 +1,20 @@
+{
+  "transactions": [
+    {
+      "id": 1,
+      "title": "Mercado",
+      "type": "withdraw",
+      "category": "Casa",
+      "amount": 500,
+      "createdAt": "2022-09-19T14:54:00.000Z"
+    },
+    {
+      "id": 2,
+      "title": "Viagem",
+      "type": "deposit",
+      "category": "Pessoal",
+      "amount": 250,
+      "createdAt": "2022-09-19T14:54:01.000Z"
+    }
+  ]
+}
