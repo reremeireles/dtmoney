@@ -1,4 +1,4 @@
-# 💰 DT Money
+# 🤑 DT Money
 
 ## 💡 Projeto
 
@@ -24,7 +24,7 @@ Acesse o deploy do projeto: https://dtmoney-reremeireles.vercel.app/
 
 - Exportação de assets do Figma
 - Criação de estilos globais com o Styled Components
-- Componetização 
+- Componentização 
 - Consumo de API utilizando uma fake API com o MirageJS
 - Hooks
   - useEffect
