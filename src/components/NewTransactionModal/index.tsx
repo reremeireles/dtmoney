@@ -1,7 +1,6 @@
-import { FormEvent, useState, useContext } from 'react';
+import { FormEvent, useState } from 'react';
 import Modal from 'react-modal';
 import { useTransactions } from '../../hooks/useTransactions';
-import { api } from '../../services/api';
 
 import incomeImg from '../../assets/income.svg';
 import outcomeImg from '../../assets/outcome.svg';
@@ -31,7 +30,7 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
             category,
             type,
         })
-        
+
         setTitle('');
         setAmount(0);
         setCategory('');
@@ -41,15 +40,15 @@ export function NewTransactionModal({isOpen, onRequestClose}: NewTransactionModa
 
     return (
         <Modal
-            isOpen={isOpen} 
+            isOpen={isOpen}
             onRequestClose={onRequestClose}
             overlayClassName='react-modal-overlay'
             className='react-modal-content'
             >
-            
-            <button 
+
+            <button
             type='button'
-            onClick={onRequestClose} 
+            onClick={onRequestClose}
             className='react-modal-close'>
             <img src={closeImg} alt='Fechar modal' />
             </button>
