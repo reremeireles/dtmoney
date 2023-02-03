@@ -2,7 +2,7 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createServer, Model } from 'miragejs';
 import { App } from './App';
-
+console.log(process.env.API_URL)
 if (process.env.NODE_ENV === 'development') {
   createServer({
     models: {
