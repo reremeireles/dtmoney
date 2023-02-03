@@ -39,7 +39,14 @@ export function TransactionsProvider({ children }: TransactionsProviderProps) {
             createdAt: new Date(),
         })
 
-        const { transaction } = response.data;
+        let transaction: any;
+
+        if (process.env.NODE_ENV === 'development') {
+            transaction = response.data.transaction;
+        } else {
+            transaction = response.data
+        }
+
 
         setTransactions([
             ...transactions,

@@ -2,34 +2,31 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import { createServer, Model } from 'miragejs';
 import { App } from './App';
-console.log(process.env.API_URL)
-if (process.env.NODE_ENV === 'development') {
+
+if (process.env.REACT_APP_NODE_ENV === 'development') {
   createServer({
     models: {
       transaction: Model,
     },
 
     seeds(server) {
-      server.db.loadData({
-        transactions: [
-          {
-            id: 1,
-            title: 'Mercado',
-            type: 'withdraw',
-            category: 'Casa',
-            amount: 500,
-            createdAt: new Date('2022-09-19 11:54:00'),
-          },
-          {
-            id: 2,
-            title: 'Viagem',
-            type: 'deposit',
-            category: 'Pessoal',
-            amount: 250,
-            createdAt: new Date('2022-09-19 11:54:01'),
-          },
-        ]
-      })
+      server.db.createCollection('transaction', [
+        {
+          id: 1,
+          title: 'Mercado',
+          type: 'withdraw',
+          category: 'Casa',
+          amount: 500,
+          createdAt: new Date('2022-09-19 11:54:00'),
+        },
+        {
+          id: 2,
+          title: 'Viagem',
+          type: 'deposit',
+          category: 'Pessoal',
+          amount: 250,
+          createdAt: new Date('2022-09-19 11:54:01'),
+        }])
     },
 
     routes() {
